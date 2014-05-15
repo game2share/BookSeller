@@ -19,14 +19,16 @@ namespace BookSellerWCF
         public string Genre { get; private set; }
         [DataMember]
         public double Price { get; private set; }
-
-        public Book(string id, string title, string author, string genre, double price)
+        [DataMember]
+        public int Stock { get; set; }
+        public Book(string id, string title, string author, string genre, double price, int stock)
         {
             Title = title;
             Id = id;
             Author = author;
             Genre = genre;
             Price = price;
+            Stock = stock;
         }
 
     }
