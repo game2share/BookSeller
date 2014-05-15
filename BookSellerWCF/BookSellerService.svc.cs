@@ -15,10 +15,10 @@ namespace BookSellerWCF
 
         public BookSellerService()
         {
-            bookList.Add(new Book("1234567891234", "The history of my life !", "Le Grand Martin", "Le meilleur", -50));
-            bookList.Add(new Book("4242424242424", "H2G2", "Douglas Adams", "Science-fiction - Comédie", 42.00));
-            bookList.Add(new Book("9780375826689", "Eragon", "Christopher Paolini", "Fantastique", 19.01));
-            bookList.Add(new Book("9782747014557", "L'Ainé", "Christopher Paolini", "Fantastique", 29.01));
+            bookList.Add(new Book("1234567891234", "The history of my life !", "Le Grand Martin", "Le meilleur", 1000, 1000));
+            bookList.Add(new Book("4242424242424", "H2G2", "Douglas Adams", "Science-fiction - Comédie", 42.00, 500));
+            bookList.Add(new Book("9780375826689", "Eragon", "Christopher Paolini", "C'est dla merde", 0.01, 3));
+            bookList.Add(new Book("9782747014557", "L'Ainé", "Christopher Paolini", "C'est dla merde", 0.01, 1));
         }
 
         Book IBookSellerService.getBookById(string id)
@@ -61,6 +61,15 @@ namespace BookSellerWCF
                 }
             }
             return byGenre;
+        }
+
+
+        long IBookSellerService.takeBooks(Book theBook, int nb)
+        {
+            if(theBook.Stock >= nb){
+                theBook.Stock -= nb;
+            }
+            return theBook.Stock - nb;
         }
     }
 }

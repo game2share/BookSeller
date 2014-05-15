@@ -11,6 +11,8 @@ namespace BookSellerWCF
     [ServiceContract]
     public interface IBookSellerService
     {
+        //Operations on Books
+
         [OperationContract]
         Book getBookById(string id);
         [OperationContract]
@@ -19,6 +21,7 @@ namespace BookSellerWCF
         IEnumerable<Book> getBooksByAuthor(string author);
         [OperationContract]
         IEnumerable<Book> getBookByGenre(string genre);
-
+        [OperationContract]
+        int takeBooks(Book theBook, int nb);
     }
 }
