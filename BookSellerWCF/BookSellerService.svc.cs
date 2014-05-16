@@ -72,9 +72,9 @@ namespace BookSellerWCF
             return byGenre;
         }
 
-        int  IBookSellerService.takeBooks(int theBook, int nb)
+        int  IBookSellerService.takeBooks(string theBook, int nb)
         {
-            for (int i = 0; bookList[i].Id != theBook.ToString(); i++ ){
+            for (int i = 0; bookList[i].Id != theBook; i++ ){
                     if (bookList[i].Stock >= nb)
                     {
                         bookList[i].Stock -= nb;

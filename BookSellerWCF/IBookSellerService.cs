@@ -22,6 +22,6 @@ namespace BookSellerWCF
         [OperationContract]
         IEnumerable<Book> getBookByGenre(string genre);
         [OperationContract]
-        int takeBooks(int theBook, int nb);
+        int takeBooks(string theBook, int nb);
     }
 }
