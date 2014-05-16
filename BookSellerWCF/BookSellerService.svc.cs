@@ -64,7 +64,7 @@ namespace BookSellerWCF
         }
 
 
-        long IBookSellerService.takeBooks(Book theBook, int nb)
+        int IBookSellerService.takeBooks(Book theBook, int nb)
         {
             if(theBook.Stock >= nb){
                 theBook.Stock -= nb;
