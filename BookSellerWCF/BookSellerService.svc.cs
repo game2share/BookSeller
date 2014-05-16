@@ -26,7 +26,7 @@ namespace BookSellerWCF
             bookList.Add(new Book("4444444444444", "The Lord Of The Ring III", "Tolkien", "Fantastique", 40, 1000));
             bookList.Add(new Book("5555555555555", "H2G2", "Douglas Adams", "Fantastique", 42.00, 500));
             bookList.Add(new Book("6666666666666", "Brisingr", "Christopher Paolini", "Fantastique",30, 3));
-            bookList.Add(new Book("7777777777777", "L'Héritage", "Christopher Paolini", "Fantastique", 30, 1));
+            bookList.Add(new Book("7777777777777", "L'Héritage", "Christopher Paolini", "Fantastique", 30, 0));
         }
 
         Book IBookSellerService.getBookById(string id)
