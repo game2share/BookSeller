@@ -17,8 +17,16 @@ namespace BookSellerWCF
         {
             bookList.Add(new Book("1234567891234", "The history of my life !", "Le Grand Martin", "Le meilleur", 1000, 1000));
             bookList.Add(new Book("4242424242424", "H2G2", "Douglas Adams", "Science-fiction - Comédie", 42.00, 500));
-            bookList.Add(new Book("9780375826689", "Eragon", "Christopher Paolini", "C'est dla merde", 0.01, 3));
-            bookList.Add(new Book("9782747014557", "L'Ainé", "Christopher Paolini", "C'est dla merde", 0.01, 1));
+            bookList.Add(new Book("9780375826689", "Eragon", "Christopher Paolini", "Fantastique", 19.9, 3));
+            bookList.Add(new Book("9782747014557", "L'Ainé", "Christopher Paolini", "Fantastique", 19.9, 1));
+            bookList.Add(new Book("1234567891234", "The history of my life !", "Le Grand Martin", "Le meilleur", 1000, 1000));
+            bookList.Add(new Book("1111111111111", "The hobbit", "Tolkien", "Fantastique", 42.00, 500));
+            bookList.Add(new Book("2222222222222", "The Lord Of The Ring I", "Tolkien", "Fantastique", 31, 3));
+            bookList.Add(new Book("3333333333333", "The Lord Of The Ring II", "Tolkien", "Fantastique", 31, 1));
+            bookList.Add(new Book("4444444444444", "The Lord Of The Ring III", "Tolkien", "Fantastique", 40, 1000));
+            bookList.Add(new Book("5555555555555", "H2G2", "Douglas Adams", "Fantastique", 42.00, 500));
+            bookList.Add(new Book("6666666666666", "Brisingr", "Christopher Paolini", "Fantastique",30, 3));
+            bookList.Add(new Book("7777777777777", "L'Héritage", "Christopher Paolini", "Fantastique", 30, 1));
         }
 
         Book IBookSellerService.getBookById(string id)
@@ -62,7 +70,6 @@ namespace BookSellerWCF
             }
             return byGenre;
         }
-
 
         int IBookSellerService.takeBooks(Book theBook, int nb)
         {
